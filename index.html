@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Displaywala | Doorstep Mobile Repair</title>
+  <meta name="description" content="Mobile Displaywala - Mobile repair and display replacement service at your doorstep in Nagpur." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f6f8fb;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; }
+    header {
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0b5cff;
+    }
+    .logo span { color: #111827; }
+    .nav a {
+      margin-left: 18px;
+      color: #374151;
+      font-weight: 600;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0b5cff, #173b9c);
+      color: #fff;
+      padding: 70px 20px;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.13);
+      padding: 8px 14px;
+      border-radius: 30px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 52px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      color: #eaf0ff;
+    }
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+    .primary { background: #fff; color: #0b5cff; }
+    .green { background: #19a463; color: #fff; }
+    .card {
+      background: #fff;
+      color: #172033;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,26,77,0.2);
+    }
+    .card h3 { margin-bottom: 12px; font-size: 23px; }
+    .card li {
+      list-style: none;
+      padding: 9px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    section { max-width: 1100px; margin: auto; padding: 60px 20px; }
+    .title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+    .sub {
+      text-align: center;
+      color: #667085;
+      margin-bottom: 35px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .service {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    }
+    .icon { font-size: 32px; margin-bottom: 10px; }
+    .service h3 { margin-bottom: 7px; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .step {
+      background: #fff;
+      padding: 24px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #0b5cff;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 12px;
+      font-weight: 800;
+    }
+    .booking {
+      background: #0f172a;
+      color: #fff;
+      border-radius: 20px;
+      padding: 35px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .booking p { color: #cbd5e1; }
+    form { display: grid; gap: 11px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 0;
+      border-radius: 9px;
+      font: inherit;
+    }
+    textarea { min-height: 90px; }
+    button {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      padding: 14px;
+      border-radius: 9px;
+      background: #19a463;
+      color: #fff;
+    }
+    footer {
+      background: #0b1220;
+      color: #cbd5e1;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    footer strong { color: #fff; }
+    .tech-illustration {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+      border: 1px solid rgba(255,255,255,.4);
+      box-shadow: 0 20px 50px rgba(18, 55, 116, 0.18);
+    }
+    .tech-illustration svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .ad-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 20px 10px;
+    }
+    .ad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .ad-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      padding: 28px;
+      color: #fff;
+      min-height: 210px;
+      background: linear-gradient(135deg, #111827, #334155);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+    .ad-card:nth-child(2) { background: linear-gradient(135deg, #7c3aed, #2563eb); }
+    .ad-card:nth-child(3) { background: linear-gradient(135deg, #047857, #0f766e); }
+    .ad-card .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .ad-card h3 {
+      font-size: 25px;
+      margin: 18px 0 8px;
+    }
+    .ad-card p { color: #eef2ff; }
+    .ad-card .cta {
+      display: inline-block;
+      margin-top: 18px;
+      background: #fff;
+      color: #111827;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+    .ad-card .phone-art {
+      position: absolute;
+      right: -15px;
+      bottom: -45px;
+      font-size: 105px;
+      opacity: .18;
+      transform: rotate(-12deg);
+    }
+    @media (max-width: 800px) {
+      .hero-inner, .booking { grid-template-columns: 1fr; }
+      .grid, .steps { grid-template-columns: 1fr 1fr; }
+      h1 { font-size: 40px; }
+      .nav-links { display: none; }
+      .ad-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      .grid, .steps { grid-template-columns: 1fr; }
+      .hero { padding: 50px 20px; }
+      h1 { font-size: 36px; }
+      .title { font-size: 29px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">MOBILE <span>DISPLAYWALA</span></div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="badge">🚗 Doorstep Mobile Repair • Nagpur</div>
+          <h1>Mobile Service<br>At Your Doorstep</h1>
+          <p>Broken display? Battery issue? Charging problem? Book a technician and get your mobile repaired at your home or office.</p>
+          <div class="buttons">
+            <a class="btn primary" href="#booking">Book Doorstep Service</a>
+            <a class="btn green" href="https://wa.me/917498729010?text=Hi%20Mobile%20Displaywala%2C%20I%20need%20doorstep%20mobile%20repair%20service.">WhatsApp Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>⚡ Quick Service</h3>
+          <ul>
+            <li>✓ Display / LCD / AMOLED</li>
+            <li>✓ Battery Replacement</li>
+            <li>✓ Charging Repair</li>
+            <li>✓ Touch & Speaker Issues</li>
+            <li>✓ Home & Office Visits</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="ad-section">
+      <h2 class="title">Mobile Displaywala Offers</h2>
+      <p class="sub">Creative service advertisements for your customers</p>
+      <div class="ad-grid">
+        <div class="ad-card">
+          <span class="tag">DISPLAY SPECIALIST</span>
+          <h3>📱 Cracked Display?</h3>
+          <p>Don't replace your phone. Replace the display at your doorstep.</p>
+          <a class="cta" href="#booking">Book Now</a>
+          <div class="phone-art">📱</div>
+        </div>
+        <div class="ad-card">
+          <span class="tag">DOORSTEP SERVICE</span>
+          <h3>🚗 We Come To You!</h3>
+          <p>Home or office — convenient mobile repair without the shop visit.</p>
+          <a class="cta" href="https://wa.me/917498729010?text=Hi%20Mobile%20Displaywala%2C%20I%20want%20doorstep%20service.">WhatsApp Now</a>
+          <div class="phone-art">🛠️</div>
+        </div>
+        <div class="ad-card">
+          <span class="tag">FAST • TRUSTED • EASY</span>
+          <h3>⚡ Display Done. Problem Gone.</h3>
+          <p>Display, battery, charging and more — get your mobile checked today.</p>
+          <a class="cta" href="#contact">Contact Us</a>
+          <div class="phone-art">⚡</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1100px;margin:auto;padding:55px 20px 20px;">
+      <h2 class="title">Professional Mobile Repair</h2>
+      <p class="sub">Expert technicians, professional tools and doorstep service.</p>
+      <div class="tech-illustration" aria-label="Mobile repair illustration">
+        <svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="repairTitle repairDesc">
+          <title id="repairTitle">Mobile repair services illustration</title>
+          <desc id="repairDesc">A modern phone illustration with service tools and spark icons.</desc>
+          <defs>
+            <linearGradient id="bgGlow" x1="0" x2="1">
+              <stop offset="0%" stop-color="#dbeafe"/>
+              <stop offset="100%" stop-color="#ecfeff"/>
+            </linearGradient>
+          </defs>
+          <rect width="1200" height="340" fill="url(#bgGlow)"/>
+          <circle cx="200" cy="78" r="42" fill="#bfdbfe" opacity="0.8"/>
+          <circle cx="1000" cy="70" r="35" fill="#c7d2fe" opacity="0.6"/>
+          <circle cx="1030" cy="240" r="55" fill="#d1fae5" opacity="0.6"/>
+
+          <g transform="translate(130 15)">
+            <rect x="270" y="40" width="250" height="230" rx="34" fill="#0f172a"/>
+            <rect x="290" y="70" width="210" height="170" rx="22" fill="#f8fafc"/>
+            <circle cx="395" cy="155" r="58" fill="#dbeafe"/>
+            <path d="M360 155h70" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <path d="M395 120v70" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <circle cx="395" cy="155" r="20" fill="#ffffff"/>
+            <path d="M282 120l-54 52" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <path d="M520 120l54 52" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <path d="M295 203l70 0" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <path d="M470 203l70 0" stroke="#0b5cff" stroke-width="10" stroke-linecap="round"/>
+            <rect x="330" y="236" width="130" height="18" rx="9" fill="#e2e8f0"/>
+          </g>
+
+          <g transform="translate(650 30)">
+            <rect x="0" y="60" width="200" height="140" rx="20" fill="#fff" stroke="#cbd5e1"/>
+            <path d="M55 120l48-48 43 35 30-36 32 49H55z" fill="#dbeafe"/>
+            <circle cx="168" cy="90" r="18" fill="#fbbf24"/>
+            <path d="M168 40v20M168 140v20M118 90h20M218 90h-20" stroke="#0b5cff" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="40" cy="183" r="12" fill="#34d399"/>
+            <circle cx="160" cy="200" r="10" fill="#60a5fa"/>
+            <circle cx="175" cy="50" r="8" fill="#f472b6"/>
+          </g>
+
+          <g transform="translate(500 205)">
+            <circle cx="0" cy="0" r="10" fill="#0b5cff"/>
+            <circle cx="40" cy="-20" r="8" fill="#34d399"/>
+            <circle cx="82" cy="0" r="9" fill="#fbbf24"/>
+            <circle cx="120" cy="-18" r="7" fill="#ef4444"/>
+            <path d="M0 0l42 -20 40 20 40 -18" stroke="#3b82f6" stroke-width="4" fill="none"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 class="title">Our Services</h2>
+      <p class="sub">Professional mobile repair services at your convenience.</p>
+      <div class="grid">
+        <div class="service"><div class="icon">📱</div><h3>Display Replacement</h3><p>LCD, OLED and AMOLED display replacement for popular smartphone models.</p></div>
+        <div class="service"><div class="icon">🔋</div><h3>Battery Replacement</h3><p>Replace weak or damaged batteries with a reliable replacement.</p></div>
+        <div class="service"><div class="icon">🔌</div><h3>Charging Repair</h3><p>Charging port and charging-related problems checked and repaired.</p></div>
+        <div class="service"><div class="icon">🔊</div><h3>Speaker & Mic</h3><p>Fix sound, microphone and call-quality problems.</p></div>
+        <div class="service"><div class="icon">📷</div><h3>Camera Repair</h3><p>Camera module and camera-related issues for supported models.</p></div>
+        <div class="service"><div class="icon">🛠️</div><h3>Other Repairs</h3><p>Tell us your mobile problem and we will guide you.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="title">How It Works</h2>
+      <p class="sub">Simple, fast and convenient.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Book</h3><p>Fill the form or contact us on WhatsApp.</p></div>
+        <div class="step"><div class="num">2</div><h3>We Come</h3><p>Our technician visits your home or office.</p></div>
+        <div class="step"><div class="num">3</div><h3>Get Repaired</h3><p>Get your mobile checked and repaired at your doorstep.</p></div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="booking">
+        <div>
+          <h2>Book a Doorstep Service</h2>
+          <p style="margin-top:10px;">Send your details. The button will open WhatsApp with your booking information.</p>
+          <p style="margin-top:20px;"><strong>📞 7498729010</strong><br><strong>📞 7385982172</strong></p>
+        </div>
+        <form onsubmit="book(event)">
+          <input id="name" required placeholder="Your Name" />
+          <input id="phone" required placeholder="Mobile Number" inputmode="tel" />
+          <input id="model" required placeholder="Mobile Brand & Model" />
+          <select id="problem" required>
+            <option value="">Select Problem</option>
+            <option>Display</option>
+            <option>Battery</option>
+            <option>Charging</option>
+            <option>Speaker / Mic</option>
+            <option>Camera</option>
+            <option>Other</option>
+          </select>
+          <input id="address" required placeholder="Your Address / Area" />
+          <textarea id="note" placeholder="Additional details"></textarea>
+          <button type="submit">Book via WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="title">Contact Mobile Displaywala</h2>
+      <p class="sub">Doorstep mobile repair service in Nagpur</p>
+      <div class="grid">
+        <div class="service"><h3>📞 Call</h3><p>7498729010<br>7385982172</p></div>
+        <div class="service"><h3>💬 WhatsApp</h3><p><a href="https://wa.me/917498729010" style="color:#0b5cff;font-weight:800">Chat with us</a></p></div>
+        <div class="service"><h3>📧 Email</h3><p>akhileshnimbulkar074@gmail.com</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <strong>MOBILE DISPLAYWALA</strong><br>
+    Service at Your Doorstep • Nagpur<br><br>
+    © 2026 Mobile Displaywala. All rights reserved.
+  </footer>
+
+  <script>
+    function book(e) {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+      const model = document.getElementById('model');
+      const problem = document.getElementById('problem');
+      const address = document.getElementById('address');
+      const note = document.getElementById('note');
+
+      const msg = `*New Doorstep Service Booking*%0A%0AName: ${encodeURIComponent(name.value)}%0APhone: ${encodeURIComponent(phone.value)}%0AMobile: ${encodeURIComponent(model.value)}%0AProblem: ${encodeURIComponent(problem.value)}%0AAddress: ${encodeURIComponent(address.value)}%0ANote: ${encodeURIComponent(note.value)}`;
+      window.open('https://wa.me/917498729010?text=' + msg, '_blank');
+    }
+  </script>
+</body>
+</html>
